@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+
+/*geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+    --font_cad : "Libre Baskerville", serif;
+    --fontcandal : "Candal", sans-serif;
+    --color1 : #2F5337;
+    --colorbar_roda: #243407;
+    --colornav : #FFFDFD;
+    --colorgelo : #fffafa;
+    --colorpes : #7F7F7F;
+    --fontbar : 'Cascadia Code', sans-serif;
+}
+
+input, label {
+    display: block;
+    width: 100%;
+}
+
+input:focus, label:focus{
+    outline: none;
+}
+
+a {
+    color: darkgreen;
+}
+
+body {
+    padding-top: 5vh; /*view height -> 5% da tela*/
+    
+    background-size: cover;
+    background-position-y: -150px;
+}
+
+/*form*/
+#main-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    border-radius: 10px;
+    border-color: black;
+    padding: 25px;
+}
+
+#close_cad{
+    left: 435px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+#main-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.full-box {
+    flex: 1 1 100%;
+    position: relative;
+    }
+
+.half-box{
+    flex: 1 1 45%;
+    position: relative;
+}
+
+.spacing{
+    margin-right: 2.5%;
+}
+
+label{
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+input{
+    border-bottom: 2px solid #323232;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+}
+
+input:focus{
+    border-color: #E60084;
+}
+
+input[type="submit"] {
+    background-color: #E60084;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#agreement {
+    margin-right: 5px;
+    position: relative;
+    left: 200px;
+    top: 55px;
+}
+
+#agreement, #agreemente-label{
+    display: inline-block;
+    width: auto;
+}
+
+#close_cad{
+    position: relative;
+
+}
+
+/*validações*/
+.error-validation{
+    color: #FF1A1A;
+    position: absolute;
+    top: 57px;
+    font-size: .8rem;
+}
+
+.template {
+    display: none;
+}
+
+/* Login */
+
+#popup_wrapper_login{
+    /* display: ; */
+    background-color: var(--color3);
+    width: 440px;
+    height: 370px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    border-radius: 10px ;
+
+}
+
+#popup_wrapper_login #popup_login{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#popup_wrapper_login #popup_login #popup_close_login{
+    display: flex;
+    position: relative;
+    bottom: 10px;
+    left: 400px;
+    cursor: pointer;
+    
+}
+
+#popup_wrapper_login #popup_login #popup_content_login h1{
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 10px;
+    font-family: var(--font_cad);
+    padding-top: 10px;
+}
+
+#popup_wrapper_login #popup_login #popup_content_login #info_login{
+    display: flex;
+    flex-direction: column; 
+    padding-left: 60px;
+    width: 360px;
+    
+}   
+
+#popup_wrapper_login #popup_login #popup_content_login #info_login .tex{
+    margin-bottom: 20px;
+    border-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none; 
+    font-size: 15px;
+    font-family: var(--font_cad);
+    background-color: var(--color3);
+    color: black; 
+    margin-left: 5px;   
+}
+
+::-webkit-input-placeholder{
+    color: black;
+}
+
+#log_but{
+    cursor: pointer;
+    background-color: green;
+    border: 0;
+    border-radius: 10px 0px;
+    color: black;
+    width: 310px ;
+    height: 35px;
+    font-family: var(--font_cad);
+    margin-top: 10px;
+    
+}
+
+#esq{
+    padding-left: 13px;
+}
+
+#popup_wrapper_login #popup_login #popup_content_login #info_login #pag{
+    padding-top: 20px;
+    margin-left: 60px;
+}
+
+#popup_wrapper_login #popup_login #popup_content_login #info_login #pag a{
+    color: black;
+}
+
+/* Home page */
+
+.home{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: var(--colorbar_roda);
+    box-shadow: 0px 3px 10px var(--colorbar_roda);
+}
+
+.hotbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+/* #logo{
+    display: flex;
+    align-items: center;
+} */
+
+.navlist{
+    display: flex;
+    align-items: center;
+}
+
+.navlist ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav_iten{
+    margin: 0 70px;
+    
+}
+
+.nav_link{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: var(--colornav);
+    font-weight: 400;
+    font-family: var(--fontbar);
+}
+
+.barra_geral{
+    background-color: var(--colorbar_roda);
+    
+}
+
+.two_bar{
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 100px;
+    
+}
+
+.logo_home{
+    position: relative;
+    left: 40px;
+    top: 7px;
+    display: flex;
+    width: 13rem;
+    
+}   
+
+
+.pesquisa{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.pesq{
+    width: 40.875rem;
+    height: 3rem;
+    font-family: var(--fontbar);
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    
+}
+
+::placeholder{
+    color: var(--colorpes);
+}
+
+.lupa{
+    cursor: pointer;
+    width: 2.875rem;
+    height: 3.019rem;
+    padding-left: 10px;
+}
+
+.img_perfil1{
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    width: 6rem;
+    height: 5rem;
+}
+
+
+.but_log{
+    padding-right: 100px;
+}
+
+.but_log button{
+    display: flex;
+    border: none;
+    background-color: var(--colorbar_roda);
+    padding: 20px 35px 1px 15px;
+    width: 200px ;
+    
+}
+
+.but_log button a{
+    text-decoration: none;
+    color: var(--colornav);
+    font-family: var(--fontbar);
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+/* bane */
+
+#bane_promo{
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: var(--colorgelo);
+    
+}
+
+#local_bane{
+    display: flex;
+    height: auto;
+    width: auto;
+}
+
+#local_bane img{
+    display: flex;
+    width: 1536px;
+}
+
+/* false produtos */
+
+#tips_prod{
+    color: none;
+}
+
+#false_prods{
+    text-align: center;
+    display: flex;  
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.icon_tips{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 11px;
+}
+
+.icon_tips img{
+    border-radius: 200px;
+    border-color: var(--colorbar_roda);
+    width: auto;
+    height: 220px;
+}
+
+.icon_tips h3{
+    margin-top: 30px;
+    padding-bottom: 40px;
+    font-family: var(--fontbar);
+    color: var(--colorgelo);
+    font-size: 30px;
+}
+
+/* chat e prod */
+
+#chat_prod{
+    background-color: var(--colorgelo);
+    display: flex;
+    flex-direction: row;
+}
+
+#exibi_prod{
+    display: flex;
+    flex-direction: column;
+}
+
+#exibi_prod h1{
+    padding-left: 150px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: var(--fontcandal);
+    font-size: 40px;
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.prods{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 90px 30px 90px;
+    width: 510px;
+}
+
+.imgs_comp{
+    padding: 0px 50px 0px 50px;
+}
+
+.imgs_comp img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.preco_but{
+    display: flex;
+    padding-top: 10px;
+}
+
+
+
+.preco_but button{
+    background-color: var(--color1);
+    border-radius: 8px;
+    margin-left: 15px;
+}
+
+.preco_but button a{
+    text-decoration: none;
+    color: var(--colorgelo);
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 4px;
+}
+
+#like h1{
+
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: var(--fontcandal);
+    font-size: 36px;
+}
+
+
+/* Rodapé */
+
+.rodape{
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: var(--colorbar_roda);
+    flex-direction: row;
+}
+
+.rodape p{
+    color: var(--colornav);
+    font-family: var(--font_cad);
+    font-size: 13px;
+}
+
+.rodape p a{
+    text-decoration: none;
+    color: var(--colornav);
+}
+
+.pag{
+    margin: 40px 100px;
+}
+.pag h3{
+    color: var(--colornav);
+    font-family: var(--font_cad);
+    font-size: 15px;
+}
+
+
+/* tela prod */
+#prod_disc{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--colorgelo);
+}
+
+#img_prod{
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+#img_prod img{
+    width: 40rem;
+    height:36rem;
+    border-radius: 20px;
+}
+
+#info_preco{
+    margin-left: 200px;
+    flex-direction: column;
+}
+
+#info_preco h1{
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: start;
+}
+
+#form_preco{
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid black;
+    box-shadow: 5px white;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+}
+
+#separa{
+    padding: 30px;
+}
+
+#separa h3 a{
+    color: black;
+}
+
+#separa p{
+    font-size: 12px;
+}
+
+#separa p a{
+    font-size: 12px;
+    color: black;
+}
+
+#qts{
+    text-align: center ;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#qts h3{
+    
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+#qts input{
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.but_comp{
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: var(--color1);
+    border-radius: 20px;
+    color: var(--colorgelo);
+    cursor: pointer;
+}
+
+#buts{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+#cal_ent{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+#cal_ent h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#cal_ent p{
+    width: 110px;
+    border: 2px solid black;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#buts_qts{
+    flex-direction: row;
+}
+
+#buts_qts button{
+    cursor: pointer;
+    padding: 1.5px;
+    border: 2px solid black;
+    border-radius: 0px 10px 10px 0px;
+    position: relative;
+    bottom: 22px;
+    left: 110px;
+}
+
+/* tela prod, info */
+
+#info_prod{
+    background-color: var(--colorgelo);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inf_disc{
+   margin: 100px;
+}
+
+.inf_disc h1{
+    color: var(--colorpes);
+    border-bottom: 2px solid var(--colorpes);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: gray;
+
+}
+
+.info h2{
+    margin-top: 10px;
+    
+}
+
+.dados{
+    padding: 10px;
+    padding-right: 100px;
+    text-align: center;
+}
+
+#avalia{
+    background-color: var(--colorgelo);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#avaliacao{
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+#avaliacao h1{
+    color: var(--colorpes);
+    border-bottom: 2px solid var(--colorpes);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
